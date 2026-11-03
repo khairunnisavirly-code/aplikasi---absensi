@@ -1,0 +1,114 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #2563eb;
+    font-size: 30px;
+}
+
+.container, .data {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+input, select {
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.tombol-edit {
+    background: #f59e0b;
+}
+
+.tombol-edit:hover {
+    background: #d97706;
+}
+
+.tombol-hapus {
+    background: #dc2626;
+}
+
+.tombol-hapus:hover {
+    background: #b91c1c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+}
+
+#pesanKosong {
+    text-align: center;
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container, .data {
+        padding: 15px;
+        overflow-x: auto;
+    }
+}

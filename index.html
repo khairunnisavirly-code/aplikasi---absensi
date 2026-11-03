@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Absensi Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard Absensi Siswa</h1>
+        <p>Sistem Informasi Kehadiran Siswa</p>
+    </header>
+
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total Siswa</h3>
+            <h2 id="total">0</h2>
+        </div>
+        <div class="card">
+            <h3>Hadir</h3>
+            <h2 id="hadir">0</h2>
+        </div>
+        <div class="card">
+            <h3>Izin</h3>
+            <h2 id="izin">0</h2>
+        </div>
+        <div class="card">
+            <h3>Sakit</h3>
+            <h2 id="sakit">0</h2>
+        </div>
+        <div class="card">
+            <h3>Alfa</h3>
+            <h2 id="alfa">0</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 id="judulForm">Form Absensi</h2>
+
+        <input type="text" id="nama" placeholder="Masukkan nama siswa">
+        <input type="text" id="kelas" placeholder="Masukkan kelas">
+
+        <select id="status">
+            <option value="Hadir">Hadir</option>
+            <option value="Izin">Izin</option>
+            <option value="Sakit">Sakit</option>
+            <option value="Alfa">Alfa</option>
+        </select>
+
+        <button onclick="tambahAbsensi()" id="tombolSimpan">
+            Simpan Absensi
+        </button>
+
+        <button onclick="batalEdit()" id="tombolBatal" style="display: none;">
+            Batal Edit
+        </button>
+    </div>
+
+    <div class="data">
+        <h2>Daftar Kehadiran Siswa</h2>
+
+        <input
+            type="text"
+            id="pencarian"
+            placeholder="Cari nama atau kelas siswa..."
+            oninput="cariAbsensi()"
+        >
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                    <th>Status</th>
+                    <th>Tanggal</th>
+                    <th>Waktu</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody id="dataAbsensi"></tbody>
+        </table>
+
+        <p id="pesanKosong"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
